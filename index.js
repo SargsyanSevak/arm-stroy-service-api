@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 // routes
 app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
-
+mongoose.set('strictQuery', false);
 // connect to db
 mongoose.connect(process.env.MONGO)
   .then(() => {
