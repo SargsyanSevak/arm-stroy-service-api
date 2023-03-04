@@ -21,11 +21,11 @@ app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 
 // connect to db
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO)
   .then(() => {
     // listen for requests
-    app.listen(process.env.PORT, () => {
-      console.log('connected to db & listening on port', process.env.PORT)
+    app.listen(4000, () => {
+      console.log('connected to db & listening on port 4000')
     })
   })
   .catch((error) => {
